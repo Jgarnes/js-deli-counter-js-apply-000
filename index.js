@@ -1,41 +1,37 @@
-var DeliforbellyRoster = []
+var katzDeliLine = []
 
 // Current Customer Queue
-function currentLine(DeliforbellyRoster) {
-  
-  
+function currentLine(katzDeliLine) {
+  var roster = []
+
   
     
-  if (DeliforbellyRoster.length > 0) 
-   {return "The line is currently: " +DeliforbellyRoster+ "."} 
+  if (katzDeliLine.length > 0) {
+  for (let i =0; i < katzDeliLine.length;i++)
+    roster.push(" "+(i + 1)+". "+ `${katzDeliLine[i]}`)
+     return "The line is currently:" +roster} 
   else {return "The line is currently empty." }
 }
 
 //New Customer
-function takeANumber(DeliforbellyRoster, name) {
+function takeANumber(katzDeliLine, name) {
   
-  var newCustomerPosition = DeliforbellyRoster.push(name);
+  var newCustomerPosition = katzDeliLine.push(name);
   
   var takenumberwelcomemessage = "Welcome, " + name + ". You are number " + newCustomerPosition + " in line.";
   
   return(takenumberwelcomemessage)
   
 }
-// New take number 
-function takeANumber(DeliforbellyRoster) {
-  var i = i + 1
-  
-  var customerNumber = DeliforbellyRoster.push(i++)
-  
-}
+
 // Current Customer
-function nowServing(DeliforbellyRoster) {
+function nowServing(katzDeliLine) {
   
   
-  var Currentcustomer = (DeliforbellyRoster[0]);
+  var Currentcustomer = (katzDeliLine[0]);
   
-  if (DeliforbellyRoster.length>0) 
-   {return "Currently serving " +DeliforbellyRoster.shift()+ "."} 
+  if (katzDeliLine.length>0) 
+   {return "Currently serving " +katzDeliLine.shift()+ "."} 
   else {return "There is nobody waiting to be served!"}
 }
 
